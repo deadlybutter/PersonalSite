@@ -2,7 +2,75 @@
 
 @main("Joe Kent's personal website") {
     
-    <center><h1>I left my computer at the top of the slide, when I make it there I'll finish this website...</h1></center>
-    <center><img src="http://i.imgur.com/vpZk6kW.gif"></center>                                                                      v
+    <!-- <center><h1>I left my computer at the top of the slide, when I make it there I'll finish this website...</h1></center> --> 
+    <!-- <center><img src="http://i.imgur.com/vpZk6kW.gif"></center> -->     
+
+    <center><div id="film-player"></div></center>
+    <center><button id="play-button">Play</button></center>
+    <p>I think alpha is an understatment for this prototype so keep that in mind...</p>
+
+	<script type="text/javascript">
+
+	var player;
+	var links = ["http://i.imgur.com/vpZk6kW.gif", "http://i.imgur.com/h1hRgsM.gif", "http://i.imgur.com/h3gtc.gif"];
+	var frames = [];
+	var index = 0;
+	var pauseTime = 2000;
+
+	$().ready(function(){
+		player = $('#film-player');
+		buildFrames();
+	});
+
+	$('#play-button').click(function(){
+		playFilm();
+	});
+
+	function playFilm(){
+		$(frames[0]).show();
+		index = 0;
+		setTimeout(function(){playFrame()}, pauseTime);
+	}
+
+	function playFrame(){
+		console.log("1");
+		if(index >= frames.length){
+			destroyFrames();
+			buildFrames();
+			return;
+		}
+		console.log("2");
+		$(frames[index]).hide();
+		console.log("3");
+		index++;
+		$(frames[index]).show();
+		setTimeout(function(){playFrame()}, pauseTime);
+	}
+
+	function buildFrames(){
+		for(var i = 0; i < links.length; i++){
+			frames.push($('<iframe />', {
+				class: 'frame',
+				id: 'frame-' + i, 
+				src: links[i]
+			}).appendTo('#film-player'));
+		}
+	}
+
+	function destroyFrames(){
+		$('.frame').remove();
+	}
+
+	</script>
+
+	<style type="text/css">
+
+		.frame {
+			display: none;
+			width: 360px;
+			height: 240px;
+		}
+
+	</style>
     
 }
