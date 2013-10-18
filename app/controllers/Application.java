@@ -18,5 +18,9 @@ public class Application extends Controller {
     public static Result watlang(){
         return ok(watlang.render());
     }
+
+    public static Result cards(){
+        return ok(cards.render());
+    }
   
 }

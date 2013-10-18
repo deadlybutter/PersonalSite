@@ -1,0 +1,56 @@
+@main("Cards for plotting world domination"){
+
+        <h2>Click a card to play it</h2>
+
+        <p id="directions">Show directions</p>
+
+        <h3>Cards</h3>
+        <div class="player-cards">
+            <p class="card">1</p>
+            <p class="card">2</p>
+            <p class="card">3</p>
+            <p class="card">4</p>
+            <p class="card">5</p>
+        </div>
+
+        <script>
+
+            //Deal 5 cards on start
+            //Function for getting cards from server
+            //Clicking card
+            //Verification process
+            //"The pile"
+            //Fold button
+
+            var CARDS = ["Chainsaw", "Wrench", "Tank", "Stick of dynamite", "Really angry cat", "Poop throwing monkeys", "Pro wrestler",  "Space shuttle", "Russian ICBM", "Hercules", "Obama", "US Air Force", "British Navy", "Really pointy pencil", "A screaming 5 year old", "Ironman", "Cow", "Deadly bacteria", "Witch", "Abe Lincolns Top Hat", "10 tons of popcorn & melted butter", "Lamborghini", "Megatron",  "North Korean Army", "Babe Ruth's basebeall bat", "A metal trash can", "Geico Gecko"];
+
+            var cardLimit = 5;
+            var currentCards = [];
+
+            $(document).ready(function(){
+                currentCards = $('.card');
+                for(var index = 0; index < currentCards.length; index++){
+                    $(currentCards[index]).html(getRandomCard());
+                }
+            });
+
+            $('#directions').click(function(){
+                $(this).html("Pretend this works.")
+            });
+
+            $('.card').click(function(){
+                $(this).html(getRandomCard());
+            });
+
+            $('.fold-button').click(function(){
+                folded = false;
+                currentCards = [];
+            });
+
+            function getRandomCard(){
+                return CARDS[Math.floor(Math.random() * CARDS.length)];
+            }
+
+        </script>
+
+}
