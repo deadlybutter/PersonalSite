@@ -1,78 +1,59 @@
-@(message: String)
-
 @main("Joe Kent's personal website") {
-    
-	<center><h1>I left my computer at the top of the slide, when I make it there I'll finish this website...</h1></center>  
-	<center><img src="http://i.imgur.com/vpZk6kW.gif"></center>   
 
-    <center><div id="film-player"></div></center>
-    <center><button id="play-button">Play</button></center>
-    <p>I think alpha is an understatment for this prototype so keep that in mind...</p>
+    <div class="scrolling-bar-side animatedOther fadeInDown"></div>
+    <div class="scrolling-bar-top animatedOther fadeInLeft"></div>
+    <div class="container">
+        <div class="header">
+            <div class="circular-image center"></div>
+            <h1 class="center-text name">Joe Kent</h1>
+            <h2 class="center-text flippy-text animated"></h2>
+            <br>
+        </div>
+        <hr class="section-break">
+        <div class="about">
+            <h2 class="center-text">Who am I</h2>
+            <p>I’m a 16 year old student riding the bumpy road to his dreams. I’ve been programming since 5th grade and never looked back. It’s given me the ability to make motors spin, display websites like this one, mods & tools for games, anything I can think of. It’s my personal superpower that I’m still learning how to use that let’s me create anything. It’s going to be my advantage when I change the world, when I make my dreams & visions reality. </p>
+            <p>Superpowers aside, who am I? I’m the guy who doesn’t back down from a good challenge. When opportunity doesn't knock I make a door, I dream big and aim high and never let anyone get in the way of those dreams. When someone tells me I can’t do something I get even more motivated to do it. I can do anything I dream of regardless how many times I fail along the way, and I learned that one from experience. </p>
+            <p>So that’s me in a quick nutshell and I’m just getting started with this thing called life. See what I’m doing to work towards my dreams below.  </p>
+            <br>
+        </div>
+        <hr class="section-break">
+        <div class="projects">
+            <h2 class="center-text">Projects & Work</h2>
+            <p class="center-text">Click on a category</p>
+            <div class="project-link-container">
+                <p class="left-text project-link">| <a href="/projects/computers">Computer Maintenance, Repair and everything related</a></p>
+                <p class="left-text project-link">| <a href="/projects/gamescoding">Games Programming & Modding</a></p>
+                <p class="left-text project-link">| <a href="/projects/web">Web Programming</a></p>
+                <p class="left-text project-link">| <a href="/projects/robotics">Robotics Programming</a></p>
+                <p class="left-text project-link">| <a href="/projects/electronics">Embedded Programming & Electronics</a></p>
+            </div>
+            <br>
+        </div>
+        <hr class="section-break">
+        <div class="contact">
+            <p class="center-text"><a href="mailto:joe@@joe-kent.com">joe@@joe-kent.com</a> | <a href="https://twitter.com/Thedeadlybutter">@@thedeadlybutter</a> | <a href="http://lnkd.in/bXWnv5K"> LinkedIn</a></p>
+            <p class="center-text small-text">Created by Joseph Kent, Copyright 2013</p>
+        </div>
+    </div>
 
-	<script type="text/javascript">
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.flippy-text').text(getRandomTrait());
+            $('.flippy-text').mouseover(function(){
+                $('.flippy-text').addClass('wobble');
+                $('.flippy-text').one('webkitAnimationEnd mozAnimationEnd oAnimationEnd animationEnd', function(){
+                    $('.flippy-text').removeClass('wobble');
+                    $('.flippy-text').text(getRandomTrait());
+                });
+            });
+        });
 
-	var player;
-	var links = ["http://i.imgur.com/vpZk6kW.gif", "http://i.imgur.com/h1hRgsM.gif", "http://i.imgur.com/h3gtc.gif"];
-	var frames = [];
-	var index = 0;
-	var pauseTime = 2000;
+        function getRandomTrait(){
+            var traits = ["PC Gamer", "High School Student", "Maker", "Aspiring Entrepreneur", "Former FRC & FLL lead programmer", "Always looking forward", "Self Motivated", "Tactile Learner", "Web Developer", "Games Programmer & Modder",
+                          "Robotics programmer", "Self Directed", "Do-er"];
+            return traits[Math.floor(Math.random() * traits.length)];
+        }
 
-	$().ready(function(){
-		player = $('#film-player');
-		buildFrames();
-	});
-
-	$('#play-button').click(function(){
-		playFilm();
-	});
-
-	function playFilm(){
-		$(frames[0]).show();
-		index = 0;
-		setTimeout(function(){playFrame()}, pauseTime);
-	}
-
-	function playFrame(){
-		console.log("1");
-		if(index >= frames.length){
-			destroyFrames();
-			buildFrames();
-			return;
-		}
-		console.log("2");
-		$(frames[index]).hide();
-		console.log("3");
-		index++;
-		$(frames[index]).show();
-		setTimeout(function(){playFrame()}, pauseTime);
-	}
-
-	function buildFrames(){
-		for(var i = 0; i < links.length; i++){
-			frames.push($('<iframe />', {
-				class: 'frame',
-				id: 'frame-' + i, 
-				src: links[i]
-			}).appendTo('#film-player'));
-		}
-	}
-
-	function destroyFrames(){
-		$('.frame').remove();
-	}
-
-	</script>
-
-	<style type="text/css">
-
-		.frame {
-			display: none;
-			width: 360px;
-			height: 240px;
-		}
-
-	</style>
-
-
-    
+    </script>
 }

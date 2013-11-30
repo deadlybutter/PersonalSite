@@ -4,14 +4,12 @@
 
 # Home page
 GET     /                           controllers.Application.index()
-
-#Projects
-GET     /projects/watlang           controllers.Application.watlang()
-GET     /projects/cards             controllers.Application.cards()
-
-#Staging
-GET     /staging/mckee              controllers.Application.mckeeSite()
-GET     /staging/mckee              controllers.MckeeApp.cisco()
+GET     /projects/computers         controllers.Application.computers()
+GET     /projects/gamescoding       controllers.Application.gamescoding()
+GET     /projects/web               controllers.Application.web()
+GET     /projects/web/watlang       controllers.Application.watlang()
+GET     /projects/robotics          controllers.Application.robot()
+GET     /projects/electronics       controllers.Application.electronics()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
