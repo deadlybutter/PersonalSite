@@ -35,4 +35,8 @@ public class Application extends Controller {
         return ok(electronics.render());
     }
 
+    public static Result ld28(){
+        return ok(ld28.render());
+    }
+
 }

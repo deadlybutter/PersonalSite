@@ -10,6 +10,7 @@ GET     /projects/web               controllers.Application.web()
 GET     /projects/web/watlang       controllers.Application.watlang()
 GET     /projects/robotics          controllers.Application.robot()
 GET     /projects/electronics       controllers.Application.electronics()
+GET     /ld28                       controllers.Application.ld28()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
