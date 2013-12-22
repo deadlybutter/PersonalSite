@@ -103,3 +103,8 @@
 a {
     color: black;
 }
+
+.italic-text {
+    font-style: italic;
+    font-size: 14px;
+}
