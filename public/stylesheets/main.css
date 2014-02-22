@@ -66,6 +66,10 @@ body {
 	border: 1px solid #111111;
 }
 
+.project-link {
+	text-decoration: none;
+}
+
 .cover-image {
 	display: block;
 	width: 256px;
