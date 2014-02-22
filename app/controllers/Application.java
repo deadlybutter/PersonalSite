@@ -1,9 +1,16 @@
 package controllers;
 
+import models.FrontPageText;
 import play.*;
 import play.mvc.*;
 
 import views.html.*;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class Application extends Controller {
   
@@ -11,28 +18,12 @@ public class Application extends Controller {
         return ok(index.render());
     }
 
-    public static Result computers(){
-        return ok(computer.render());
-    }
-
-    public static Result gamescoding(){
-        return ok(games.render());
-    }
-
-    public static Result web(){
-        return ok(web.render());
+    public static Result contact(){
+        return ok(contact.render());
     }
 
     public static Result watlang(){
         return ok(watlang.render());
-    }
-
-    public static Result robot(){
-        return ok(robotics.render());
-    }
-
-    public static Result electronics(){
-        return ok(electronics.render());
     }
 
     public static Result ld28(){

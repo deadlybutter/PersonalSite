@@ -4,12 +4,8 @@
 
 # Home page
 GET     /                           controllers.Application.index()
-GET     /projects/computers         controllers.Application.computers()
-GET     /projects/gamescoding       controllers.Application.gamescoding()
-GET     /projects/web               controllers.Application.web()
+GET     /contact                    controllers.Application.contact()
 GET     /projects/web/watlang       controllers.Application.watlang()
-GET     /projects/robotics          controllers.Application.robot()
-GET     /projects/electronics       controllers.Application.electronics()
 GET     /ld28                       controllers.Application.ld28()
 
 # Map static resources from the /public folder to the /assets URL path

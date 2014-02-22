@@ -1,61 +1,36 @@
 @main("Joe Kent's personal website") {
 
-    <div class="scrolling-bar-side animatedOther fadeInDown"></div>
-    <div class="scrolling-bar-top animatedOther fadeInLeft"></div>
-    <div class="container">
+        <!-- Cool kids put easter eggs here, but I'm hipster so I'm putting a Christmas egg here. I'm so hipster, that this line IS the Christmas egg. Yeah, thats right. -->
+
         <div class="header">
-            <!-- <div class="circular-image center"></div> -->
-            <h1 class="center-text name">Joe Kent</h1>
-            <!-- <h2 class="center-text flippy-text animated"></h2> --> 
-            <h2 class="center-text">Programmer | High School Student</h2>
-            <h3 class="center-text italic-text">Looking for internships!</h3>
-            <br>
-        </div>
-        <hr class="section-break">
-        <div class="about">
-            <h2 class="center-text">Who am I?</h2>
-            <p>I’m a 16 year old student riding the bumpy road to his dreams. I’ve been programming since 5th grade and never looked back. It’s given me the ability to make motors spin, display websites like this one, mods & tools for games, anything I can think of. It’s my personal superpower that I’m still learning how to use which enables me create anything. It’s going to be my advantage when I change the world, when I make my dreams & visions reality. </p>
-            <p>Superpowers aside, who am I? I’m the guy who doesn’t back down from a good challenge. When opportunity doesn't knock I make a door, I dream big and aim high and never let anyone get in the way of those dreams. When someone tells me I can’t do something I get even more motivated to do it. I can do anything I dream of regardless how many times I fail along the way, and I learned that one from experience. </p>
-            <p>So that’s me in a quick nutshell and I’m just getting started with this thing called life. See what I’m doing to work towards my dreams below.  </p>
-            <br>
-        </div>
-        <hr class="section-break">
-        <div class="projects">
-            <h2 class="center-text">Projects & Work</h2>
-            <p class="center-text">Click on a category</p>
-            <div class="project-link-container">
-                <p class="left-text project-link">| <a href="/projects/computers">Computer Maintenance, Repair and everything related</a></p>
-                <p class="left-text project-link">| <a href="/projects/gamescoding">Games Programming & Modding</a></p>
-                <p class="left-text project-link">| <a href="/projects/web">Web Programming</a></p>
-                <p class="left-text project-link">| <a href="/projects/robotics">Robotics Programming</a></p>
-                <p class="left-text project-link">| <a href="/projects/electronics">Embedded Programming & Electronics</a></p>
+            <div class="bio-container">
+                <h1 class="name">JOE KENT</h1>
+                <h3 class="bio">Freelance web developer and game modder</h3>
             </div>
-            <br>
+            <div class="links-container ">
+                <a href="/" class="tab-button selected-tab">Projects</a>
+                <a href="/contact" class="tab-button not-selected-tab">Contact</a>
+            </div>
         </div>
-        <hr class="section-break">
-        <div class="contact">
-            <p class="center-text"><a href="mailto:joe@@joe-kent.com">joe@@joe-kent.com</a> | <a href="https://twitter.com/Thedeadlybutter">@@thedeadlybutter</a> | <a href="http://lnkd.in/bXWnv5K"> LinkedIn</a></p>
-            <p class="center-text small-text">Created by Joseph Kent, Copyright 2013</p>
+        <div class="project-container">
+            <a href="">
+                <div class="project-box"><img class="cover-image" src="/assets/images/zombie_cover.png"></div>
+            </a>
+            <a href="http://www.ludumdare.com/compo/ludum-dare-27/?action=preview&uid=17944">
+                <div class="project-box"><img class="cover-image" src="/assets/images/ld27_cover.png"></div>
+            </a>
+            <a href="http://www.ludumdare.com/compo/ludum-dare-25/?action=preview&uid=17944">
+                <div class="project-box"><img class="cover-image" src="/assets/images/LD25_cover.png"></div>
+            </a> 
+            <a href="http://www.joe-kent.com/projects/web/watlang">
+                <div class="project-box"><img class="cover-image" src="/assets/images/watlang_cover.jpg"></div>
+            </a>
+            <a href="https://github.com/deadlybutter/VoxelCommander">
+                <div class="project-box"><img class="cover-image" src="/assets/images/VoxelCommander_cover.png"></div>
+            </a>
+            <a href="/ld28">
+                <div class="project-box"><img class="cover-image" src="/assets/images/LD28_cover.png"></div>
+            </a>         
         </div>
-    </div>
-
-    <script type="text/javascript">
-/*        $(document).ready(function(){
-            $('.flippy-text').text(getRandomTrait());
-            $('.flippy-text').mouseover(function(){
-                $('.flippy-text').addClass('wobble');
-                $('.flippy-text').one('webkitAnimationEnd mozAnimationEnd oAnimationEnd animationEnd', function(){
-                    $('.flippy-text').removeClass('wobble');
-                    $('.flippy-text').text(getRandomTrait());
-                });
-            });
-        });*/ //Commented out in the chance I want to put this back soon, otherwise I'll delete this later.
-
-        function getRandomTrait(){
-            var traits = ["PC Gamer", "High School Student", "Maker", "Aspiring Entrepreneur", "Former FRC & FLL lead programmer", "Always looking forward", "Self Motivated", "Tactile Learner", "Web Developer", "Games Programmer & Modder",
-                          "Robotics programmer", "Self Directed", "Do-er", "Risk taker", "Big dreamer"];
-            return traits[Math.floor(Math.random() * traits.length)];
-        }
-    </script>
 
 }
