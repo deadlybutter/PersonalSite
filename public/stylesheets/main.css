@@ -51,6 +51,7 @@ body {
 .project-container {
 	margin-top: 5%;
 	margin-left: 5%;
+	margin-right: 5%;
 }
 
 .contact-container {
@@ -74,4 +75,12 @@ body {
 .cover-image:hover {
 	background-color: #111111;
 	opacity: 0.5;
+}
+
+.blue-bar {
+	display: block;
+	background-color: #0074D9;
+	height: 2px;
+	left: 5%;
+	width: 320px;
 }
