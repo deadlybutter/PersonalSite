@@ -1,0 +1,55 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.section {
+  display: block;
+  width: 100%;
+  line-height: 1;
+}
+
+.text {
+  margin: 0;
+  padding: 2%;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 32px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.small-image {
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+}
+
+.blue-bg {
+  background-color: #0074D9
+}
+
+.navy-bg {
+  background-color: #001F3F;
+}
+
+.blue-f {
+  color: #0074D9
+}
+
+.navy-f {
+  color: #001F3F;
+}
+
+.white-f {
+  color: white;
+}

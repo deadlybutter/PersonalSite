@@ -7,6 +7,7 @@ GET     /                           controllers.Application.index()
 GET     /contact                    controllers.Application.contact()
 GET     /projects/web/watlang       controllers.Application.watlang()
 GET     /ld28                       controllers.Application.ld28()
+GET     /dadcard                    controllers.Application.dadCard()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

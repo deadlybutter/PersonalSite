@@ -1,16 +1,7 @@
 package controllers;
 
-import models.FrontPageText;
-import play.*;
 import play.mvc.*;
-
 import views.html.*;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 public class Application extends Controller {
   
@@ -28,6 +19,10 @@ public class Application extends Controller {
 
     public static Result ld28(){
         return ok(ld28.render());
+    }
+
+    public static Result dadCard(){
+        return ok(card.render());
     }
 
 }
